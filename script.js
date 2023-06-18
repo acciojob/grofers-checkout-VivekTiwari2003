@@ -9,23 +9,22 @@
 
 // getSumBtn.addEventListener("click", getSum);
 
-
 const getSumBtn = document.createElement("button");
 getSumBtn.textContent = "Get Total Price";
 document.body.appendChild(getSumBtn);
 
 const getSum = () => {
-  // Get all the prices from the table
+  // Step 1: Get all the prices from the table
   const prices = document.querySelectorAll('.prices');
 
-  // Calculate the total price
+  // Step 2: Calculate the total price
   let totalPrice = 0;
   prices.forEach((price) => {
     totalPrice += parseFloat(price.textContent);
   });
 
-  // Create a new row for the total price
-  const table = document.querySelector('#grocery-table');
+  // Step 3: Create a new row for the total price
+  const table = document.querySelector('table');
   const newRow = document.createElement('tr');
   const newCell = document.createElement('td');
   newCell.textContent = 'Total Price: ' + totalPrice.toFixed(2); // Assuming prices are in decimal format
@@ -35,5 +34,7 @@ const getSum = () => {
 };
 
 getSumBtn.addEventListener("click", getSum);
+
+
 
 
