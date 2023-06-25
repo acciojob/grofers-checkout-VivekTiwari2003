@@ -15,7 +15,7 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
   // Step 1: Get all the prices from the table
-  const prices = document.querySelectorAll('.prices');
+  const prices = document.querySelectorAll('.price');
 
   // Step 2: Calculate the total price
   let totalPrice = 0;
